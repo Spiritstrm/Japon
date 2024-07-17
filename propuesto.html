@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        /* Estilos CSS pueden ser agregados aquí */
+    </style>
+    <script>
+        $(document).ready(function() {
+            // Ocultar bloque
+            $("#c1").click(function() {
+                $("#cont1").hide(1500);
+            });
+
+            // Mostrar bloque
+            $("#c2").click(function() {
+                $("#cont1").show("slow");
+            });
+
+            // Cambiar tamaño
+            $("#c3").click(function() {
+                $("#cont1").animate({ fontSize: '2.4em', width: 400, padding: 24 }, 2500);
+            });
+
+            //combinado
+            $("#c4").click(function() {
+                $("#cont1").toggle({ fontSize: '2.4em', width: 400, padding: 24 }, 2500);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<button id="c1">Ocultar Bloque</button>
+<button id="c2">Mostrar Bloque</button>
+<button id="c3">Cambiar Tamaño</button>
+<button id="c4">Boton Combinado</button>
+
+<div id="cont1" style="background-color: rgb(180, 230, 173); padding: 10px; margin-top: 20px;">
+    Este es el contenido que puedes ocultar, mostrar o cambiar de tamaño.
+</div>
+
+</body>
+</html>
